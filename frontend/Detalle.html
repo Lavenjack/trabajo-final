@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="Detalle.css" />
+    <script type="module" src="detalle.js"></script>
+    <title>Detalle del Juego</title>
+  </head>
+
+  <body>
+    <!-- Cargando Juego -->
+    <div id="loadingDetalle" class="loading-container">
+      <div class="spinner"></div>
+      <div class="loading-text">Cargando juego...</div>
+    </div>
+    <header>
+      <h1 class="title">DETALLE DEL JUEGO</h1>
+      <!-- Ghost animado -->
+      <div class="ghost">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <a
+        class="volverInicio"
+        style="font-family: Montserrat, sans-serif"
+        href="index.html"
+        rel="noopener noreferrer"
+        >Volver a Juegos</a
+      >
+    </header>
+
+    <!-- Fondo oscuro para cuando el formulario esté abierto -->
+    <div class="fondo-oscuro" id="fondoOscuro"></div>
+
+    <!-- Contenedor principal -->
+    <div class="contenedor-detalle">
+      <!-- Sección de la tarjeta (siempre centrada) -->
+      <div class="seccion-tarjeta">
+        <div class="Detallecard card">
+          <img id="imagenJuego" src="" alt="Imagen del juego" />
+          <div class="card-content">
+            <h2 id="nombreJuego"></h2>
+            <p id="descripcionJuego"></p>
+            <p><strong>Género:</strong> <span id="generoJuego"></span></p>
+            <p>
+              <strong>Perspectiva:</strong> <span id="perspectivaJuego"></span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Botones de acción debajo de la tarjeta -->
+        <div class="botones-acciones">
+          <button class="Juegos" id="editarJuegoBtn">Editar Juego</button>
+          <button class="Juegos" id="eliminarJuegoBtn">Eliminar Juego</button>
+        </div>
+      </div>
+
+      <!-- Formulario de edición (oculto inicialmente) -->
+      <div id="formularioEdicion" style="display: none">
+        <h3>Editar Juego</h3>
+
+        <input type="text" id="editarNombre" placeholder="Nombre del juego" />
+        <textarea
+          id="editarDescripcion"
+          placeholder="Descripción del juego"
+        ></textarea>
+        <input type="text" id="editarGenero" placeholder="Género del juego" />
+        <input
+          type="text"
+          id="editarPerspectiva"
+          placeholder="Perspectiva del juego"
+        />
+        <input
+          type="text"
+          id="editarUrlImagen"
+          placeholder="URL de la imagen"
+        />
+
+        <div class="botones-formulario">
+          <button class="Juegos" id="guardarEdicionBtn">Guardar Cambios</button>
+          <button class="boton-secundario" id="cancelarEdicionBtn">
+            Cancelar
+          </button>
+        </div>
+
+        <!-- El mensaje se creará dinámicamente aquí -->
+      </div>
+    </div>
+
+    <!-- Mensajes generales de éxito/error -->
+    <div id="mensajeDetalle"></div>
+  </body>
+</html>

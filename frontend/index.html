@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Juegos Historicos</title>
+    <script type="module" src="index.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Loading  -->
+    <div id="loading" class="loading-container">
+      <div class="spinner"></div>
+      <div class="loading-text">Cargando juegos...</div>
+    </div>
+
+    <header>
+      <h1 class="title">JUEGOS HISTORICOS</h1>
+      <!-- Ghost animado -->
+      <div class="ghost">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a class="Inicio" href="index.html">Inicio</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="contenido">
+      <main>
+        <!-- Grid donde se mostrarán las tarjetas de juegos -->
+        <div class="juegos-grid" id="juegosGrid">
+          <!-- Los juegos se generarán con JavaScript -->
+        </div>
+      </main>
+
+      <aside>
+        <!-- Buscador de juegos -->
+        <div class="buscador">
+          <input
+            style="font-family: Montserrat, sans-serif"
+            type="text"
+            id="buscadorInput"
+            placeholder="Buscar Juego"
+          />
+        </div>
+
+        <!-- Formulario para agregar nuevos juegos -->
+        <div class="agregar-juegos">
+          <h3 style="font-family: Montserrat, sans-serif">
+            Agrega un nuevo Juego
+          </h3>
+
+          <input
+            style="font-family: Montserrat, sans-serif"
+            id="nuevoJuego"
+            placeholder="Nombre del juego"
+          />
+          <textarea
+            id="nuevoJuegoDescripcion"
+            placeholder="Descripción del juego"
+          ></textarea>
+          <input
+            type="text"
+            id="nuevoJuegoImagen"
+            placeholder="URL de la imagen"
+          />
+          <input
+            type="text"
+            id="nuevoJuegoGenero"
+            placeholder="Género del juego"
+          />
+          <input
+            type="text"
+            id="nuevoJuegoPerspectiva"
+            placeholder="Perspectiva del juego"
+          />
+          <button
+            class="Juegos"
+            style="font-family: Montserrat, sans-serif"
+            id="agregarJuegoBtn"
+          >
+            Agregar Nuevo Juego
+          </button>
+        </div>
+
+        <!-- Div para mostrar mensajes de error/éxito al usuario -->
+        <div
+          id="mensajeError"
+          style="
+            color: #ffffff;
+            background-color: #d9534f;
+            padding: 10px;
+            border-radius: 6px;
+            display: none;
+            margin-top: 10px;
+          "
+        ></div>
+      </aside>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Juegos Clasicos. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
