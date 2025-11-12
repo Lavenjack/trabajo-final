@@ -107,8 +107,6 @@ function renderJuegos(juegos) {
  * Maneja respuestas de éxito y error
  */
 async function agregarJuego() {
-  // MOSTRAR LOADING AL AGREGAR
-  mostrarLoading();
   // Obtener valores de todos los campos del formulario
   const nombre = document.getElementById("nuevoJuego").value;
   const descripcion = document.getElementById("nuevoJuegoDescripcion").value;
@@ -192,6 +190,9 @@ async function agregarJuego() {
     setTimeout(ocultarMensaje, 5000);
     return;
   }
+
+  // ========== MOSTRAR LOADING ANTES DE ENVIAR A LA API ==========
+  mostrarLoading();
 
   // ========== PREPARACIÓN Y ENVÍO DE DATOS A LA API ==========
 

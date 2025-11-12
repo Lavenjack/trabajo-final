@@ -213,7 +213,7 @@ public class JuegosApi {
                 //System.out.println(rowsAffected + " row(s) eliminada(s).");
 
                 if (rowsAffected > 0) {
-                    System.out.println("🎯🎯🎯 VERSIÓN NUEVA - ELIMINACIÓN EXITOSA 🎯🎯🎯");
+                    
                     res.status(200);
                     return gson.toJson(Map.of("message", "✅✅✅ ELIMINADO CORRECTAMENTE ✅✅✅"));
                 } else {
